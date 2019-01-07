@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://wwwisc.intermesa.com.br/interface/consulta_v03.26.asmx?wsdl" filename="consulta_v03.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://wwwisc.intermesa.com.br/interface/consulta_v03.26.asmx?disco" filename="consulta_v03.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

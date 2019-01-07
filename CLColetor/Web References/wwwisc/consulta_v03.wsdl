@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.intermesa.com.br/interface/" xmlns:s1="http://www.intermesa.com.br/interface/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.intermesa.com.br/interface/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.intermesa.com.br/interface/">
+      <s:element name="ObtemOpcArmazem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Armazem" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtemOpcArmazemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtemOpcArmazemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalvaObs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Equip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Etiqueta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Texto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalvaObsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SalvaObsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalvaAvaria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Equip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Etiqueta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Texto" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalvaAvariaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SalvaAvariaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrocaUnidMedida">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Equip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pedido" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Item" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Unid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TrocaUnidMedidaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrocaUnidMedidaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalvaPesoBalanca">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Equip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Etiqueta" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Liquido" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Bruto" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="QtdPecas" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalvaPesoBalancaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SalvaPesoBalancaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizaStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Equip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Etiqueta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizaStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AtualizaStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalvaLocaliza">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Equip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Etiqueta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Armazem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Num" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Praca" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Linha" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Coluna" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalvaLocalizaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SalvaLocalizaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CarregaCombosUsu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CarregaCombosUsuResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CarregaCombosUsuResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RastrEtiqApres">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EtiqApres" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RastrEtiqApresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RastrEtiqApresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RastrEtiqRefCli">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RefCli" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RastrEtiqRefCliResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RastrEtiqRefCliResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RastrEtiqCodBarras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AplRefBarras" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RastrEtiqCodBarrasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RastrEtiqCodBarrasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArquivoBin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ArquivoEmDown" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArquivoBinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ArquivoBinResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DSCarregaRem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Equip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DSCarregaRemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DSCarregaRemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DSGravaRem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Equip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DSGravaRemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DSGravaRemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArquivoMomentoModif">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Arquivo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArquivoMomentoModifResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ArquivoMomentoModifResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArquivoUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Arquivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dados" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArquivoUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ArquivoUploadResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+      <s:element name="dateTime" type="s:dateTime" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+    <s:schema targetNamespace="http://www.intermesa.com.br/interface/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObtemOpcArmazemSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtemOpcArmazem" />
+  </wsdl:message>
+  <wsdl:message name="ObtemOpcArmazemSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtemOpcArmazemResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalvaObsSoapIn">
+    <wsdl:part name="parameters" element="tns:SalvaObs" />
+  </wsdl:message>
+  <wsdl:message name="SalvaObsSoapOut">
+    <wsdl:part name="parameters" element="tns:SalvaObsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalvaAvariaSoapIn">
+    <wsdl:part name="parameters" element="tns:SalvaAvaria" />
+  </wsdl:message>
+  <wsdl:message name="SalvaAvariaSoapOut">
+    <wsdl:part name="parameters" element="tns:SalvaAvariaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TrocaUnidMedidaSoapIn">
+    <wsdl:part name="parameters" element="tns:TrocaUnidMedida" />
+  </wsdl:message>
+  <wsdl:message name="TrocaUnidMedidaSoapOut">
+    <wsdl:part name="parameters" element="tns:TrocaUnidMedidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalvaPesoBalancaSoapIn">
+    <wsdl:part name="parameters" element="tns:SalvaPesoBalanca" />
+  </wsdl:message>
+  <wsdl:message name="SalvaPesoBalancaSoapOut">
+    <wsdl:part name="parameters" element="tns:SalvaPesoBalancaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AtualizaStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:AtualizaStatus" />
+  </wsdl:message>
+  <wsdl:message name="AtualizaStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:AtualizaStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalvaLocalizaSoapIn">
+    <wsdl:part name="parameters" element="tns:SalvaLocaliza" />
+  </wsdl:message>
+  <wsdl:message name="SalvaLocalizaSoapOut">
+    <wsdl:part name="parameters" element="tns:SalvaLocalizaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarregaCombosUsuSoapIn">
+    <wsdl:part name="parameters" element="tns:CarregaCombosUsu" />
+  </wsdl:message>
+  <wsdl:message name="CarregaCombosUsuSoapOut">
+    <wsdl:part name="parameters" element="tns:CarregaCombosUsuResponse" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqApresSoapIn">
+    <wsdl:part name="parameters" element="tns:RastrEtiqApres" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqApresSoapOut">
+    <wsdl:part name="parameters" element="tns:RastrEtiqApresResponse" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqRefCliSoapIn">
+    <wsdl:part name="parameters" element="tns:RastrEtiqRefCli" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqRefCliSoapOut">
+    <wsdl:part name="parameters" element="tns:RastrEtiqRefCliResponse" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqCodBarrasSoapIn">
+    <wsdl:part name="parameters" element="tns:RastrEtiqCodBarras" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqCodBarrasSoapOut">
+    <wsdl:part name="parameters" element="tns:RastrEtiqCodBarrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoBinSoapIn">
+    <wsdl:part name="parameters" element="tns:ArquivoBin" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoBinSoapOut">
+    <wsdl:part name="parameters" element="tns:ArquivoBinResponse" />
+  </wsdl:message>
+  <wsdl:message name="DSCarregaRemSoapIn">
+    <wsdl:part name="parameters" element="tns:DSCarregaRem" />
+  </wsdl:message>
+  <wsdl:message name="DSCarregaRemSoapOut">
+    <wsdl:part name="parameters" element="tns:DSCarregaRemResponse" />
+  </wsdl:message>
+  <wsdl:message name="DSGravaRemSoapIn">
+    <wsdl:part name="parameters" element="tns:DSGravaRem" />
+  </wsdl:message>
+  <wsdl:message name="DSGravaRemSoapOut">
+    <wsdl:part name="parameters" element="tns:DSGravaRemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoMomentoModifSoapIn">
+    <wsdl:part name="parameters" element="tns:ArquivoMomentoModif" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoMomentoModifSoapOut">
+    <wsdl:part name="parameters" element="tns:ArquivoMomentoModifResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:ArquivoUpload" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:ArquivoUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtemOpcArmazemHttpGetIn">
+    <wsdl:part name="Armazem" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ObtemOpcArmazemHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SalvaObsHttpGetIn">
+    <wsdl:part name="Usuario" type="s:string" />
+    <wsdl:part name="Senha" type="s:string" />
+    <wsdl:part name="Equip" type="s:string" />
+    <wsdl:part name="Etiqueta" type="s:string" />
+    <wsdl:part name="Texto" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SalvaObsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SalvaAvariaHttpGetIn">
+    <wsdl:part name="Usuario" type="s:string" />
+    <wsdl:part name="Senha" type="s:string" />
+    <wsdl:part name="Equip" type="s:string" />
+    <wsdl:part name="Etiqueta" type="s:string" />
+    <wsdl:part name="Texto" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SalvaAvariaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="TrocaUnidMedidaHttpGetIn">
+    <wsdl:part name="Usuario" type="s:string" />
+    <wsdl:part name="Senha" type="s:string" />
+    <wsdl:part name="Equip" type="s:string" />
+    <wsdl:part name="Pedido" type="s:string" />
+    <wsdl:part name="Item" type="s:string" />
+    <wsdl:part name="Unid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TrocaUnidMedidaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SalvaPesoBalancaHttpGetIn">
+    <wsdl:part name="Usuario" type="s:string" />
+    <wsdl:part name="Senha" type="s:string" />
+    <wsdl:part name="Equip" type="s:string" />
+    <wsdl:part name="Etiqueta" type="s:string" />
+    <wsdl:part name="Liquido" type="s:string" />
+    <wsdl:part name="Bruto" type="s:string" />
+    <wsdl:part name="QtdPecas" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SalvaPesoBalancaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AtualizaStatusHttpGetIn">
+    <wsdl:part name="Usuario" type="s:string" />
+    <wsdl:part name="Senha" type="s:string" />
+    <wsdl:part name="Equip" type="s:string" />
+    <wsdl:part name="Etiqueta" type="s:string" />
+    <wsdl:part name="Status" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AtualizaStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="SalvaLocalizaHttpGetIn">
+    <wsdl:part name="Usuario" type="s:string" />
+    <wsdl:part name="Senha" type="s:string" />
+    <wsdl:part name="Equip" type="s:string" />
+    <wsdl:part name="Etiqueta" type="s:string" />
+    <wsdl:part name="Armazem" type="s:string" />
+    <wsdl:part name="Num" type="s:string" />
+    <wsdl:part name="Praca" type="s:string" />
+    <wsdl:part name="Linha" type="s:string" />
+    <wsdl:part name="Coluna" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SalvaLocalizaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CarregaCombosUsuHttpGetIn">
+    <wsdl:part name="Usuario" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CarregaCombosUsuHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqApresHttpGetIn">
+    <wsdl:part name="EtiqApres" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqApresHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqRefCliHttpGetIn">
+    <wsdl:part name="RefCli" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqRefCliHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqCodBarrasHttpGetIn">
+    <wsdl:part name="AplRefBarras" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RastrEtiqCodBarrasHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoBinHttpGetIn">
+    <wsdl:part name="ArquivoEmDown" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoBinHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="DSCarregaRemHttpGetIn">
+    <wsdl:part name="Usuario" type="s:string" />
+    <wsdl:part name="Senha" type="s:string" />
+    <wsdl:part name="Equip" type="s:string" />
+    <wsdl:part name="Consulta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DSCarregaRemHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DSGravaRemHttpGetIn">
+    <wsdl:part name="Usuario" type="s:string" />
+    <wsdl:part name="Senha" type="s:string" />
+    <wsdl:part name="Equip" type="s:string" />
+    <wsdl:part name="Consulta" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DSGravaRemHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoMomentoModifHttpGetIn">
+    <wsdl:part name="Arquivo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoMomentoModifHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoUploadHttpGetIn">
+    <wsdl:part name="Arquivo" type="s:string" />
+    <wsdl:part name="Dados" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="ArquivoUploadHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="ConsultaSoap">
+    <wsdl:operation name="ObtemOpcArmazem">
+      <wsdl:input message="tns:ObtemOpcArmazemSoapIn" />
+      <wsdl:output message="tns:ObtemOpcArmazemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvaObs">
+      <wsdl:input message="tns:SalvaObsSoapIn" />
+      <wsdl:output message="tns:SalvaObsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvaAvaria">
+      <wsdl:input message="tns:SalvaAvariaSoapIn" />
+      <wsdl:output message="tns:SalvaAvariaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrocaUnidMedida">
+      <wsdl:input message="tns:TrocaUnidMedidaSoapIn" />
+      <wsdl:output message="tns:TrocaUnidMedidaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvaPesoBalanca">
+      <wsdl:input message="tns:SalvaPesoBalancaSoapIn" />
+      <wsdl:output message="tns:SalvaPesoBalancaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizaStatus">
+      <wsdl:input message="tns:AtualizaStatusSoapIn" />
+      <wsdl:output message="tns:AtualizaStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvaLocaliza">
+      <wsdl:input message="tns:SalvaLocalizaSoapIn" />
+      <wsdl:output message="tns:SalvaLocalizaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CarregaCombosUsu">
+      <wsdl:input message="tns:CarregaCombosUsuSoapIn" />
+      <wsdl:output message="tns:CarregaCombosUsuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqApres">
+      <wsdl:input message="tns:RastrEtiqApresSoapIn" />
+      <wsdl:output message="tns:RastrEtiqApresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqRefCli">
+      <wsdl:input message="tns:RastrEtiqRefCliSoapIn" />
+      <wsdl:output message="tns:RastrEtiqRefCliSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqCodBarras">
+      <wsdl:input message="tns:RastrEtiqCodBarrasSoapIn" />
+      <wsdl:output message="tns:RastrEtiqCodBarrasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoBin">
+      <wsdl:input message="tns:ArquivoBinSoapIn" />
+      <wsdl:output message="tns:ArquivoBinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DSCarregaRem">
+      <wsdl:input message="tns:DSCarregaRemSoapIn" />
+      <wsdl:output message="tns:DSCarregaRemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DSGravaRem">
+      <wsdl:input message="tns:DSGravaRemSoapIn" />
+      <wsdl:output message="tns:DSGravaRemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoMomentoModif">
+      <wsdl:input message="tns:ArquivoMomentoModifSoapIn" />
+      <wsdl:output message="tns:ArquivoMomentoModifSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoUpload">
+      <wsdl:input message="tns:ArquivoUploadSoapIn" />
+      <wsdl:output message="tns:ArquivoUploadSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ConsultaHttpGet">
+    <wsdl:operation name="ObtemOpcArmazem">
+      <wsdl:input message="tns:ObtemOpcArmazemHttpGetIn" />
+      <wsdl:output message="tns:ObtemOpcArmazemHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvaObs">
+      <wsdl:input message="tns:SalvaObsHttpGetIn" />
+      <wsdl:output message="tns:SalvaObsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvaAvaria">
+      <wsdl:input message="tns:SalvaAvariaHttpGetIn" />
+      <wsdl:output message="tns:SalvaAvariaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TrocaUnidMedida">
+      <wsdl:input message="tns:TrocaUnidMedidaHttpGetIn" />
+      <wsdl:output message="tns:TrocaUnidMedidaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvaPesoBalanca">
+      <wsdl:input message="tns:SalvaPesoBalancaHttpGetIn" />
+      <wsdl:output message="tns:SalvaPesoBalancaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizaStatus">
+      <wsdl:input message="tns:AtualizaStatusHttpGetIn" />
+      <wsdl:output message="tns:AtualizaStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalvaLocaliza">
+      <wsdl:input message="tns:SalvaLocalizaHttpGetIn" />
+      <wsdl:output message="tns:SalvaLocalizaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CarregaCombosUsu">
+      <wsdl:input message="tns:CarregaCombosUsuHttpGetIn" />
+      <wsdl:output message="tns:CarregaCombosUsuHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqApres">
+      <wsdl:input message="tns:RastrEtiqApresHttpGetIn" />
+      <wsdl:output message="tns:RastrEtiqApresHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqRefCli">
+      <wsdl:input message="tns:RastrEtiqRefCliHttpGetIn" />
+      <wsdl:output message="tns:RastrEtiqRefCliHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqCodBarras">
+      <wsdl:input message="tns:RastrEtiqCodBarrasHttpGetIn" />
+      <wsdl:output message="tns:RastrEtiqCodBarrasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoBin">
+      <wsdl:input message="tns:ArquivoBinHttpGetIn" />
+      <wsdl:output message="tns:ArquivoBinHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DSCarregaRem">
+      <wsdl:input message="tns:DSCarregaRemHttpGetIn" />
+      <wsdl:output message="tns:DSCarregaRemHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DSGravaRem">
+      <wsdl:input message="tns:DSGravaRemHttpGetIn" />
+      <wsdl:output message="tns:DSGravaRemHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoMomentoModif">
+      <wsdl:input message="tns:ArquivoMomentoModifHttpGetIn" />
+      <wsdl:output message="tns:ArquivoMomentoModifHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoUpload">
+      <wsdl:input message="tns:ArquivoUploadHttpGetIn" />
+      <wsdl:output message="tns:ArquivoUploadHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConsultaSoap" type="tns:ConsultaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtemOpcArmazem">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/ObtemOpcArmazem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaObs">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/SalvaObs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaAvaria">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/SalvaAvaria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrocaUnidMedida">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/TrocaUnidMedida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaPesoBalanca">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/SalvaPesoBalanca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizaStatus">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/AtualizaStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaLocaliza">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/SalvaLocaliza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CarregaCombosUsu">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/CarregaCombosUsu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqApres">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/RastrEtiqApres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqRefCli">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/RastrEtiqRefCli" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqCodBarras">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/RastrEtiqCodBarras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoBin">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/ArquivoBin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DSCarregaRem">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/DSCarregaRem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DSGravaRem">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/DSGravaRem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoMomentoModif">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/ArquivoMomentoModif" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoUpload">
+      <soap:operation soapAction="http://www.intermesa.com.br/interface/ArquivoUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConsultaSoap12" type="tns:ConsultaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtemOpcArmazem">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/ObtemOpcArmazem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaObs">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/SalvaObs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaAvaria">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/SalvaAvaria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrocaUnidMedida">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/TrocaUnidMedida" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaPesoBalanca">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/SalvaPesoBalanca" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizaStatus">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/AtualizaStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaLocaliza">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/SalvaLocaliza" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CarregaCombosUsu">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/CarregaCombosUsu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqApres">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/RastrEtiqApres" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqRefCli">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/RastrEtiqRefCli" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqCodBarras">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/RastrEtiqCodBarras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoBin">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/ArquivoBin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DSCarregaRem">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/DSCarregaRem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DSGravaRem">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/DSGravaRem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoMomentoModif">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/ArquivoMomentoModif" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoUpload">
+      <soap12:operation soapAction="http://www.intermesa.com.br/interface/ArquivoUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConsultaHttpGet" type="tns:ConsultaHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ObtemOpcArmazem">
+      <http:operation location="/ObtemOpcArmazem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaObs">
+      <http:operation location="/SalvaObs" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaAvaria">
+      <http:operation location="/SalvaAvaria" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TrocaUnidMedida">
+      <http:operation location="/TrocaUnidMedida" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaPesoBalanca">
+      <http:operation location="/SalvaPesoBalanca" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizaStatus">
+      <http:operation location="/AtualizaStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalvaLocaliza">
+      <http:operation location="/SalvaLocaliza" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CarregaCombosUsu">
+      <http:operation location="/CarregaCombosUsu" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqApres">
+      <http:operation location="/RastrEtiqApres" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqRefCli">
+      <http:operation location="/RastrEtiqRefCli" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RastrEtiqCodBarras">
+      <http:operation location="/RastrEtiqCodBarras" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoBin">
+      <http:operation location="/ArquivoBin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DSCarregaRem">
+      <http:operation location="/DSCarregaRem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DSGravaRem">
+      <http:operation location="/DSGravaRem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoMomentoModif">
+      <http:operation location="/ArquivoMomentoModif" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArquivoUpload">
+      <http:operation location="/ArquivoUpload" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Consulta">
+    <wsdl:port name="ConsultaSoap" binding="tns:ConsultaSoap">
+      <soap:address location="http://wwwisc.intermesa.com.br/interface/consulta_v03.26.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConsultaSoap12" binding="tns:ConsultaSoap12">
+      <soap12:address location="http://wwwisc.intermesa.com.br/interface/consulta_v03.26.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConsultaHttpGet" binding="tns:ConsultaHttpGet">
+      <http:address location="http://wwwisc.intermesa.com.br/interface/consulta_v03.26.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

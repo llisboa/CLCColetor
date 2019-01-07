@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1876C9E9-7515-4DEF-95E3-2BF5355CEE86}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CLC.Login</StartupObject>
+    <RootNamespace>CLC</RootNamespace>
+    <AssemblyName>CLColetor</AssemblyName>
+    <ProjectTypeGuids>{68B1623D-7FB9-47D8-8664-7ECEA3297D4F};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <MyType>WindowsForms</MyType>
+    <DeployDirSuffix>SmartDeviceProject1</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>CLC64x64.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>CLColetor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>$(PlatformFamilyName)=TRUE</DefineConstants>
+    <DocumentationFile>CLColetor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.NetEnterpriseServers.ExceptionMessageBox, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.NetEnterpriseServers.ExceptionMessageBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="Symbol, Version=1.6.1.4, Culture=neutral, PublicKeyToken=68ec8db391f150ca" />
+    <Reference Include="Symbol.Barcode.Design, Version=1.6.1.13, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.Imaging.Design, Version=1.6.1.5, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.Keyboard, Version=1.6.1.7, Culture=neutral, PublicKeyToken=68ec8db391f150ca" />
+    <Reference Include="Symbol.MagStripe.Design, Version=1.6.1.5, Culture=neutral, PublicKeyToken=68ec8db391f150ca, processorArchitecture=MSIL" />
+    <Reference Include="Symbol.WirelessLAN, Version=1.6.1.2, Culture=neutral, PublicKeyToken=68ec8db391f150ca" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.SR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=969db8053d3322ac, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\System.SR.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataGrid" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alert.Designer.vb">
+      <DependentUpon>Alert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColetaOff.designer.vb">
+      <DependentUpon>ColetaOff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ColetaOff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscaArq.designer.vb">
+      <DependentUpon>BuscaArq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscaArq.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conferencia.designer.vb">
+      <DependentUpon>Conferencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Conferencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carregamento.designer.vb">
+      <DependentUpon>Carregamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Carregamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opcoes.designer.vb">
+      <DependentUpon>Opcoes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opcoes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefLocaliza.designer.vb">
+      <DependentUpon>DefLocaliza.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DefLocaliza.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefStatus.designer.vb">
+      <DependentUpon>DefStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DefStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master.designer.vb">
+      <DependentUpon>Master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Local.vb" />
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Princ.designer.vb">
+      <DependentUpon>Princ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Princ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sobre.designer.vb">
+      <DependentUpon>Sobre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sobre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusRede.designer.vb">
+      <DependentUpon>StatusRede.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StatusRede.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Web References\wwwisc\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\www\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Alert.resx">
+      <DependentUpon>Alert.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColetaOff.resx">
+      <DependentUpon>ColetaOff.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscaArq.resx">
+      <DependentUpon>BuscaArq.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Conferencia.resx">
+      <DependentUpon>Conferencia.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carregamento.resx">
+      <DependentUpon>Carregamento.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opcoes.resx">
+      <DependentUpon>Opcoes.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefLocaliza.resx">
+      <DependentUpon>DefLocaliza.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefStatus.resx">
+      <DependentUpon>DefStatus.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master.resx">
+      <DependentUpon>Master.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Princ.resx">
+      <DependentUpon>Princ.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sobre.resx">
+      <DependentUpon>Sobre.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusRede.resx">
+      <DependentUpon>StatusRede.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CLC64x64.ico" />
+    <None Include="Web References\wwwisc\consulta_v03.disco" />
+    <None Include="Web References\www\consulta_v03.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CLColetor.CFG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Web References\wwwisc\consulta_v03.wsdl" />
+    <None Include="Web References\wwwisc\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\www\consulta_v03.wsdl" />
+    <None Include="Web References\www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.intermesa.com.br/interface/consulta_v03.26.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\www\</RelPath>
+      <UpdateFromURL>http://www.intermesa.com.br/interface/consulta_v03.26.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://wwwisc.intermesa.com.br/interface/consulta_v03.26.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\wwwisc\</RelPath>
+      <UpdateFromURL>http://wwwisc.intermesa.com.br/interface/consulta_v03.26.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.VisualBasic.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{F184B08F-C81C-45F6-A57F-5ABD9991F28F}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
